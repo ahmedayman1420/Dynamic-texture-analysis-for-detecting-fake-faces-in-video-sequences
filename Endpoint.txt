@@ -1,0 +1,8 @@
+1- Understand LDP form (Dynamic texture analysis for detecting) paper
+2- Understand ALDP form (ALDP) paper
+3- Compare result with (TIP2010) paper
+
+4- Phase-1 contains (LDP) code
+5- Phase-2 contains (ALDP) code
+
+6- Ask about (LDP) & (ALDP)
