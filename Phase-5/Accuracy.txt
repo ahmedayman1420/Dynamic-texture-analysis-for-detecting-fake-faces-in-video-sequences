@@ -1,0 +1,11 @@
+SVC(C=0.1, gamma=0.1, kernel='poly')
+
+original_sequences: 426 / 498 = 0.8554216867469879
+
+Deepfakes: 113 / 120 = 0.9416666666666667
+
+Face2Face: 69 / 120 = 0.575
+
+FaceSwap: 103/ 120 = 0.8583333333333333
+
+NeuralTextures: 51/96 = 0.53125

@@ -1,0 +1,46 @@
+First-ALL:{
+
+	Grid Search-RBF: 5172
+
+},
+
+Features:{
+
+	5000 Videos: 6,395.34
+
+}
+
+Deepfakes:{
+
+	RBF: 3.36
+	Linear: 120.45
+
+},
+
+Face2Face:{
+
+	RBF: 100.23
+	Linear: 4156.10
+
+}
+
+FaceSwap:{
+
+	RBF: 4.13
+	Linear: 201.06
+
+}
+
+NeuralTextures:{
+
+	RBF: 12.33
+	Linear: 6935.11
+
+}
+
+ALL:{
+
+	RBF: 123.05
+	Linear: 11213.51
+
+}
