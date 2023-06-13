@@ -1,14 +1,15 @@
+Features:{
+
+	5000 Videos: 6,395.34
+
+}
+
 First-ALL:{
 
 	Grid Search-RBF: 5172
 
 },
 
-Features:{
-
-	5000 Videos: 6,395.34
-
-}
 
 Deepfakes:{
 
