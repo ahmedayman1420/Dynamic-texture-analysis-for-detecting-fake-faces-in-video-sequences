@@ -1,0 +1,36 @@
+# Accuracy of original & 4 manipulated
+Linear Accuracy: 0.7185714285714285
+Linear Confusion matrix:
+ [[102   4  20   5   9]
+ [  0 107  10   7  16]
+ [ 13   5 109   3  10]
+ [  2   2  28 105   3]
+ [ 10  12  36   2  80]]
+
+# =============================================================== #
+
+# Accuracy of original & 3 manipulated, removing NeuralTextures
+Linear Accuracy: 0.8035714285714286
+Linear Confusion matrix:
+ [[110   4  21   5]
+ [  0 118  14   8]
+ [ 17   5 115   3]
+ [  2   2  29 107]]
+
+# =============================================================== #
+
+# Accuracy of 3 manipulated, removing original & NeuralTextures
+Linear Accuracy: 0.8095238095238095
+Linear Confusion matrix:
+ [[  0   0   0   0]
+ [  0 118  14   8]
+ [ 17   5 115   3]
+ [  2   2  29 107]]
+
+# =============================================================== #
+
+# Accuracy of original & 4 manipulated
+Linear Accuracy: 0.91
+Linear Confusion matrix:
+ [[102  38]
+ [ 25 535]]
