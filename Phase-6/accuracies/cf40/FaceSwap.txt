@@ -1,0 +1,9 @@
+RBF Accuracy: 0.6535714285714286
+RBF Confusion matrix:
+ [[133   7]
+ [ 90  50]] 
+
+Linear Accuracy: 0.7321428571428571
+Linear Confusion matrix:
+ [[ 96  44]
+ [ 31 109]]

@@ -32,7 +32,8 @@ Linear Confusion matrix:
 # Accuracy of original & 4 manipulated
 Linear Accuracy: 0.91
 Linear Confusion matrix:
- [[102  38]
+ [[102  38].
+
  [ 25 535]]
 
 # =============================================================== #

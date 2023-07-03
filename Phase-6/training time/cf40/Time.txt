@@ -1,0 +1,44 @@
+Features:{
+
+	1720 Videos: 2020
+	2580 videos: 2485
+
+	700 videos: 630
+
+}
+
+
+Deepfakes:{
+
+	RBF: 100
+	Linear: ?
+
+},
+
+Face2Face:{
+
+	RBF: 180
+	Linear: ?
+
+}
+
+FaceSwap:{
+
+	RBF: 7
+	Linear: 7132
+
+}
+
+NeuralTextures:{
+
+	RBF: ?
+	Linear: ?
+
+}
+
+ALL:{
+
+	RBF: ?
+	Linear: ?
+
+}
