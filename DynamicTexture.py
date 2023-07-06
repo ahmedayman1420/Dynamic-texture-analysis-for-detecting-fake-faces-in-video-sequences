@@ -69,43 +69,13 @@ class dynamicTexture:
         return y_pred
 
     def binary_predictor(self, list_of_test_LDP):
-        y_pred = []
-        y_score = []
-
         df_pred = self.linear_deepfakes.predict(list_of_test_LDP)
-        if np.count_nonzero(df_pred == 1) >= np.count_nonzero(df_pred == 0):
-            y_score.append(np.count_nonzero(df_pred == 1))
-            y_pred.append(1)
-        else:
-            y_score.append(np.count_nonzero(df_pred == 0))
-            y_pred.append(0)
-
         if (self.dataset_version == 'cf23'):
             f2f_pred = self.linear_face2face.predict(list_of_test_LDP)
-            if np.count_nonzero(f2f_pred == 1) >= np.count_nonzero(f2f_pred == 0):
-                y_score.append(np.count_nonzero(f2f_pred == 1))
-                y_pred.append(1)
-            else:
-                y_score.append(np.count_nonzero(f2f_pred == 0))
-            y_pred.append(0)
-
         fsw_pred = self.linear_faceswap.predict(list_of_test_LDP)
-        if np.count_nonzero(fsw_pred == 1) >= np.count_nonzero(fsw_pred == 0):
-            y_score.append(np.count_nonzero(fsw_pred == 1))
-            y_pred.append(1)
-        else:
-            y_score.append(np.count_nonzero(fsw_pred == 0))
-            y_pred.append(0)
-
         if (self.dataset_version == 'cf23'):
             nt_pred = self.linear_neuraltextures.predict(list_of_test_LDP)
-            if np.count_nonzero(nt_pred == 1) >= np.count_nonzero(nt_pred == 0):
-                y_score.append(np.count_nonzero(nt_pred == 1))
-                y_pred.append(1)
-            else:
-                y_score.append(np.count_nonzero(nt_pred == 0))
-                y_pred.append(0)
-
+            
         if (self.dataset_version == 'cf23'):
             return df_pred, f2f_pred, fsw_pred, nt_pred
         elif (self.dataset_version == 'cf40'):
