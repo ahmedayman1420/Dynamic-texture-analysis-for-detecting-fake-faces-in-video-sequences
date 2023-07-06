@@ -107,6 +107,6 @@ class dynamicTexture:
                 y_pred.append(0)
 
         if (self.dataset_version == 'cf23'):
-            df_pred, f2f_pred, fsw_pred, nt_pred
+            return df_pred, f2f_pred, fsw_pred, nt_pred
         elif (self.dataset_version == 'cf40'):
-            df_pred,  fsw_pred
+            return df_pred,  fsw_pred
