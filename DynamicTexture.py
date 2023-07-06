@@ -66,11 +66,7 @@ class dynamicTexture:
 
     def multi_predictor(self, list_of_test_LDP):
         y_pred = self.linear_svm.predict(list_of_test_LDP)
-        # print(y_pred)
-        if np.count_nonzero(y_pred == 0) > (len(y_pred) // 2):
-            return 0
-        else:
-            return 1
+        return y_pred
 
     def binary_predictor(self, list_of_test_LDP):
         y_pred = []
@@ -110,7 +106,7 @@ class dynamicTexture:
                 y_score.append(np.count_nonzero(nt_pred == 0))
                 y_pred.append(0)
 
-        if y_pred.count(1) > 0:
-            return 0
-        else:
-            return 1
+        if (self.dataset_version == 'cf23'):
+            df_pred, f2f_pred, fsw_pred, nt_pred
+        elif (self.dataset_version == 'cf40'):
+            df_pred,  fsw_pred
