@@ -7,7 +7,7 @@ import numpy as np
 
 
 class dynamicTexture:
-    def __init__(self, dataset_version, model_version):
+    def __init__(self, dataset_version, model_version, path):
 
         assert dataset_version == 'cf23' or dataset_version == 'cf40', "dataset_version is not equal to 'cf23' or 'cf40'"
         assert model_version == 'binary' or model_version == 'multi', "model_version is not equal to 'binary' or 'multi'"
@@ -18,27 +18,27 @@ class dynamicTexture:
         if (dataset_version == 'cf23'):
             if (model_version == 'binary'):
                 self.linear_deepfakes = load(
-                    'models/cf23/Linear-Deepfakes.joblib')
+                    path + 'cf23/Linear-Deepfakes.joblib')
                 self.linear_face2face = load(
-                    'models/cf23/Linear-Face2Face.joblib')
+                    path + 'cf23/Linear-Face2Face.joblib')
                 self.linear_faceswap = load(
-                    'models/cf23/Linear-FaceSwap.joblib')
+                    path + 'cf23/Linear-FaceSwap.joblib')
                 self.linear_neuraltextures = load(
-                    'models/cf23/Linear-NeuralTextures.joblib')
+                    path + 'cf23/Linear-NeuralTextures.joblib')
 
             elif (model_version == 'multi'):
                 self.linear_svm = load(
-                    'models/cf23/Linear-SVM.joblib')
+                    path + 'cf23/Linear-SVM.joblib')
 
         elif (dataset_version == 'cf40'):
             self.linear_deepfakes = load(
-                'models/cf23/Linear-Deepfakes.joblib')
+                path + 'cf40/Linear-Deepfakes.joblib')
             # self.linear_face2face = load(
-            #     'models/cf23/Linear-Face2Face.joblib')
+            #    path + 'cf40/Linear-Face2Face.joblib')
             self.linear_faceswap = load(
-                'models/cf23/Linear-FaceSwap.joblib')
+                path + 'cf40/Linear-FaceSwap.joblib')
             # self.linear_neuraltextures = load(
-            #     'models/cf23/Linear-NeuralTextures.joblib')
+            #  path + 'cf40/Linear-NeuralTextures.joblib')
 
     def predict(self, input_gray_frames, frame_rate):
 
@@ -54,7 +54,7 @@ class dynamicTexture:
         for frame_partition in frames_partitions:
             frames_ldp = LDP_TOP(np.array(frame_partition).astype(np.float64))
             list_of_test_LDP.append(frames_ldp)
-        
+
         if (self.dataset_version == 'cf23'):
             if (self.model_version == 'binary'):
                 return self.binary_predictor(list_of_test_LDP)
@@ -84,7 +84,7 @@ class dynamicTexture:
             y_score.append(np.count_nonzero(df_pred == 0))
             y_pred.append(0)
 
-        if(self.dataset_version == 'cf23'):
+        if (self.dataset_version == 'cf23'):
             f2f_pred = self.linear_face2face.predict(list_of_test_LDP)
             if np.count_nonzero(f2f_pred == 1) >= np.count_nonzero(f2f_pred == 0):
                 y_score.append(np.count_nonzero(f2f_pred == 1))
