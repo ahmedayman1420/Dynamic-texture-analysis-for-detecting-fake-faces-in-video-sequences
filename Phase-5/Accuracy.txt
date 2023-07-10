@@ -1,4 +1,4 @@
-SVC(C=0.1, kernel='linear')
+SVC(C=0.1, gamma=0.1, kernel='rbf')
 
 original_sequences: 426 / 498 = 0.8554216867469879
 
